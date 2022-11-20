@@ -17,9 +17,13 @@ A compose DockerFile to run the PSIRS backend application
 
 To clean up your images and containers:
 * Run the three commands below:
-	 `docker stop $(docker ps -aq)`
-	 `docker rm $(docker ps -aq)`
-	 `docker rmi $(docker images -q)`
+*	 `docker stop $(docker ps -aq)`
+*	 `docker rm $(docker ps -aq)`
+*	 `docker rmi $(docker images -q)`
+
+To have shell access to your container
+* docker exec -it psirsbackend_web_1 bash -c "sudo -u devuser /bin/bash”
+
 
 ## Contributors
 [Daser David](https://github.com/daser)
